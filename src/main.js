@@ -6,6 +6,10 @@ app.on('ready', () => {
         width: 1000,
         height: 600,
         icon: path.join(__dirname, 'icon.png'),
+        webPreferences: {
+            preload: path.join(__dirname, 'preload.js'),
+            nodeIntegration: true
+        }
     })
     win.setMenuBarVisibility(false);
     win.setTitle('Текстовый редактор');
